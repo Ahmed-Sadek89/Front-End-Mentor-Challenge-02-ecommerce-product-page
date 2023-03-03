@@ -1,0 +1,27 @@
+{
+  "name": "front-end-mentor-challenge-02-ecommerce-product-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-Sadek89/Front-End-Mentor-Challenge-02-ecommerce-product-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahmed-Sadek89/Front-End-Mentor-Challenge-02-ecommerce-product-page/issues"
+  },
+  "homepage": "https://github.com/Ahmed-Sadek89/Front-End-Mentor-Challenge-02-ecommerce-product-page#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3"
+  }
+}
