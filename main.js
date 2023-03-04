@@ -1,7 +1,7 @@
 const body = document.body
 const image_view = document.getElementById('image-view')
 const layout_view = document.getElementById('image-view2');
-const image_list = document.querySelectorAll('#image-list');
+const image_list = document.querySelectorAll('.image-list');
 
 const layout = document.getElementById('layout')
 const layout_close = document.getElementById('close');
