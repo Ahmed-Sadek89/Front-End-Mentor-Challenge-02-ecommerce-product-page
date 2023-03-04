@@ -1,4 +1,11 @@
-@import './Components/data';
-body{
-    font-weight: normal;
-}
+// assets
+@import 'variables';
+@import 'media';
+@import 'base';
+
+//components
+@import 'Components/header';
+@import 'Components/main';
+@import 'Components/layout';
+
+@import 'Components/dynamic'

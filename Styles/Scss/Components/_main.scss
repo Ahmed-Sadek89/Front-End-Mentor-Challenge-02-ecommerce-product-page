@@ -1,0 +1,198 @@
+.main{
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+        padding: 0px;
+    } 
+    @include desktop{
+        flex-direction: row;
+        padding: 40px 20px;
+    }
+    gap: 70px;
+    &-left{
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        &-image-view{
+            display: flex;
+            width: 100%;
+            @include mobile{
+                height: 100vh;
+            } 
+            @include desktop{
+                height: auto;
+            }
+            transition: $transition;
+            // transform: translateX(-425px);
+            img:not(:nth-child(1)) {
+                @include mobile{
+                    display: block;
+                } 
+                @include desktop{
+                    display: none;
+                }
+            }
+            img{
+                width: 100%;
+                object-fit: cover;
+                @include mobile{
+                    border-radius: 0px;
+                } 
+                @include desktop{
+                    border-radius: 30px;
+                }
+            }
+        }
+        &-image-list{
+            margin-top: 20px;
+            @include mobile{
+                display: none;
+            } 
+            @include desktop{
+                display: block;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                li{
+                    img{
+                        width: 100%;
+                        border-radius: 30px;
+                        transition: $transition;
+                        cursor: pointer;
+                        object-fit: cover;
+                        &:hover {
+                            opacity: 0.5;
+                            outline: 3px solid $Orange
+                        }
+                    }
+                    
+                }
+                    
+            }
+        }
+        &-image-carousel{
+            @include mobile{
+                display: block;
+            }
+            @include desktop{
+                display: none;
+            }
+            img{
+                position: absolute;
+                top: 50%;
+                cursor: pointer;
+                background-color: $White;
+                padding: 20px;
+                border-radius: 50%;
+            }
+            img:nth-child(1){
+                left: 0px;
+                margin-left: 20px;
+            }
+            img:nth-child(2){
+                right: 0px;
+                margin-right: 20px;
+            }
+        }
+    }
+    &-right{
+        flex: 1;
+        margin-top: 30px;
+        @include mobile{
+            padding: 0px 20px;
+        }
+        @include desktop{
+            padding: 0px;
+            padding-top: 40px;
+        }
+        h5{
+            color: $Orange;
+            text-transform: uppercase;
+        }
+        h1{
+            font-size: 41px;
+            line-height: 1;
+            margin: 15px 0px;
+            color: $Very-dark-blue;
+        }
+        p{
+            margin: 25px 0px;
+            line-height: 1.5;
+            color: $Dark-grayish-blue
+        }
+        &-amount{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            @include mobile{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @include desktop{
+                flex-direction: column;
+                align-items: normal;
+                justify-content: baseline;
+            }
+            &-info{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                h2{
+                    color: $Very-dark-blue;
+                }
+                span{
+                    color: $Orange;
+                    background-color: #ffecde;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+            }
+            &-discount{
+                text-decoration: line-through;
+                color: $Dark-grayish-blue
+
+            }
+        }
+        &-option{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            &-control, button{ padding: 20px 10px; border-radius: 20px;}
+            &-control{
+                flex: 1;
+                background-color: $Light-grayish-blue;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                img{cursor: pointer;}
+                img:nth-child(2){
+                    height: 7px;
+                }
+                img:nth-child(1){
+                    height: 16px;
+                }
+                span{color: $Very-dark-blue; font-weight: bold;}
+            }
+            button{
+                flex: 1;
+                background-color: $Orange;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+                align-items: center;
+                color: $White;
+                font-weight: bold;
+            }
+        }
+    }
+}

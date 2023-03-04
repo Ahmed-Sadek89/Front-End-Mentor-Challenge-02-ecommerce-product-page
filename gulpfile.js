@@ -5,7 +5,7 @@ const prefix = require('gulp-autoprefixer');
 task('sass', () => {
     return src(['Styles/Scss/*.scss', 'Styles/Scss/Components/**/**.scss'])
         .pipe(sass({outputStyle: "compressed"}))
-        .pipe(prefix('last 4 versions'))
+        // .pipe(prefix('last 4 versions'))
         .pipe(dest('Styles/Css'))
 })
 

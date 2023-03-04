@@ -1,0 +1,85 @@
+header{
+    padding: 30px 0px;
+    border-bottom: 1px solid $Dark-grayish-blue;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mobile{
+        height: auto
+    } 
+    @include desktop{
+        height: 15vh;
+    } 
+    .header-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &-left{
+            gap: 30px;
+            display: flex;
+            flex-direction: row;
+            &-images{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                img:nth-child(1),img:nth-child(2){cursor: pointer;}
+                img:nth-child(1){
+                    
+                    @include mobile{
+                        display: block;
+                    } 
+                    @include desktop{
+                        display: none;
+                    } 
+                }
+            }
+            ul{
+                @include mobile{
+                    display: none;
+                } 
+                @include desktop{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                } 
+                li{
+                    transition: $transition;
+                    color: $Dark-grayish-blue;
+                    cursor: pointer;
+                    &:hover{
+                        color: $Very-dark-blue
+                    }
+                }
+            }
+        }
+        &-right{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            img:nth-child(1),img:nth-child(2){cursor: pointer;}
+            img:nth-child(2){
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    .header-bottom{
+        background-color: $Dark-grayish-blue;
+        color: $White;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin: 15px;
+        @include mobile{
+            display: block;
+        } 
+        @include desktop{
+            display: none;
+        } 
+    }
+    
+}
